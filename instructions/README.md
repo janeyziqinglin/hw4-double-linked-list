@@ -64,6 +64,7 @@ Add (AG) and (MG) next to tiers, add major conditions to meet to pass each tier.
 4. Exceeds  (MG)
    * README.md is filled out
      * Including the questions asked
+   * Have at least 3 commits (many more really)
 
 
 AG - Auto-graded  
@@ -74,6 +75,8 @@ MG - Manually graded
 * [Wikipedia Doubly Linked List][doubly-linked list]
 * [Visualization of Data Structures](https://visualgo.net/en/list)
 * [Big O Cheat sheet](https://flexiple.com/algorithms/big-o-notation-cheat-sheet/)
+* [Github Markdown Tables](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
+* [Markdown Latex Math](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 
 
 
