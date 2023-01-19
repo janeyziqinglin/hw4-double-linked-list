@@ -1,4 +1,4 @@
-# HW README
+# Homework 04: Doubly Linked List
 
 Name:
 
@@ -18,8 +18,16 @@ Did you use any external resources (you do not have to cite in class material)? 
 
 (Optional) How would you improve the assignment? 
 
-## Questions Answers (change to better heading)
+## Understanding Time Complexity
 
+1. Using a markdown table and markdown/latex math, show the BigO for Arrays, Singly Linked Lists, Doubly Linked Lists (so total of 3). For the columns, you will look at the Average Case Time Complexity for Access, Search/Find,	Insertion, and Deletion. 
+
+2. Usually for singly and doubly linked lists, we reference both the head and tail for speed considerations. What would be the cost if you only had your head referenced, and you wanted to push to the tail of either?  $O(?)$
+
+3. Name an example where an array is better than a linked list, and an example where a linked list is better than an array. Make sure to reference the big O as part of your reasoning. 
+
+
+Note: Make sure look at your finished markdown in the browser hosted on github or via a markdown preview extension. To confirm the notation is showing up properly. 
 
 ## Important notes
 
