@@ -76,6 +76,7 @@ int unitTest4(int status)
     dll_t *test = create_dll();
     dll_push_back(test, 142);
     dll_pop_back(test);
+    // printf("size %d \n",dll_size(test));
     if (0 == dll_size(test))
     {
         passed = 1;
@@ -111,16 +112,141 @@ int unitTest5(int status)
     return passed;
 }
 
+
+// Tests push_front and dll_pop_back functions
+int unitTest6(int status)
+{
+    int passed = 0;
+    dll_t *test = create_dll();
+    // printf("size %d \n",dll_size(test));
+    // dll_push_back(test, 142);
+    // dll_push_back(test, 142);
+    dll_pop_front(test);
+    // printf("size %d \n",dll_size(test));
+    if (0 == dll_size(test))
+    {
+        passed = 1;
+
+    }
+    else
+    {
+        passed = 0;
+    }
+    free_dll(test);
+
+    return passed;
+}
+
+
+// Tests dll_insert intermediate 
+int unitTest7(int status)
+{
+    int passed = 0;
+    dll_t *test = create_dll();
+    dll_push_back(test, 142);
+    dll_push_back(test, 142);
+    printf("size %d \n",dll_size(test));
+    dll_insert(test,1,142);
+    printf("size %d \n",dll_size(test));
+    if (3 == dll_size(test))
+    {
+        passed = 1;
+
+    }
+    else
+    {
+        passed = 0;
+    }
+    free_dll(test);
+
+    return passed;
+}
+
+// Tests dll_insert last, recall pos starts at 0
+int unitTest8(int status)
+{
+    int passed = 0;
+    dll_t *test = create_dll();
+    dll_push_back(test, 142);
+    printf("size %d \n",dll_size(test));
+    dll_insert(test,0,142); 
+    printf("size %d \n",dll_size(test));
+    if (2 == dll_size(test))
+    {
+        passed = 1;
+
+    }
+    else
+    {
+        passed = 0;
+    }
+    free_dll(test);
+
+    return passed;
+}
+
+//reomve test 
+int unitTest9(int status)
+{
+    int passed = 0;
+    dll_t *test = create_dll();
+    // printf("size %d \n",dll_size(test));
+    dll_push_back(test, 142);
+    // dll_push_back(test, 142);
+    dll_remove(test,0);
+    // printf("size %d \n",dll_size(test));
+    if (0 == dll_size(test))
+    {
+        passed = 1;
+
+    }
+    else
+    {
+        passed = 0;
+    }
+    free_dll(test);
+
+    return passed;
+}
+
+//reomve test 
+int unitTest10(int status)
+{
+    int passed = 0;
+    dll_t *test = create_dll();
+    // printf("size %d \n",dll_size(test));
+    dll_push_back(test, 142);
+    // dll_push_back(test, 142);
+    // printf("size %d \n",dll_size(test));
+    if (dll_get(test,0) == 142)
+    {
+        passed = 1;
+
+    }
+    else
+    {
+        passed = 0;
+    }
+    free_dll(test);
+
+    return passed;
+}
+
 // An array of function pointers to all of the tests
 // that main() can use iterate over them.
 // UNCOMMENT Tests as you are ready to use them
 // Add your own tests!
 int (*unitTests[])(int) = {
-   // unitTest1,
-   // unitTest2,
-   // unitTest3,
-   // unitTest4,
-   // unitTest5,
+   unitTest1,
+   unitTest2,
+   unitTest3,
+   unitTest4,
+   unitTest5,
+   unitTest6,
+   unitTest7,
+   unitTest8,
+   unitTest9,
+   unitTest10,
     NULL};
 
 // ====================================================
@@ -133,7 +259,7 @@ int main()
     int counter = 0;
     while (unitTests[counter] != NULL)
     {
-        printf("========unitTest %d========\n", counter);
+        printf("========unitTest %d========\n", counter+1);
         if (1 == unitTests[counter](1))
         {
             printf("passed test\n");
